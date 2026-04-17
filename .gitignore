@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Data — downloaded, extracted, and preprocessed locally. Never commit.
+# Covers: data/single_pendulum.zip, data/single_pendulum/**, data/pendulum_preprocessed.npz
+data/
+*.npy
+*.zip
+
+# Large training artifacts (committed checkpoints in checkpoints/ are allow-listed below)
+results/
+*.h5
+
+# Notebook output figures (regenerable)
+Figures/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Allow the shipped checkpoints and figure_data
+!checkpoints/
+!checkpoints/**
+!figure_data/
+!figure_data/**

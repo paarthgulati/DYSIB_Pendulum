@@ -1,0 +1,22 @@
+# Core — model training, encoding, rollout
+numpy>=1.23
+scipy>=1.10
+torch>=2.0
+tqdm>=4.65
+
+# Data pipeline (data.py)
+Pillow>=10.0               # PIL: PNG loading + resizing
+
+# Analysis (precompute_figure_data.py, reproduce_figures.ipynb)
+pandas>=2.0                # sweep_metrics.csv handling
+h5py>=3.8                  # only needed to regenerate sweep_metrics from old H5 files
+scikit-learn>=1.3          # k-NN for Levina-Bickel MLE
+scikit-dimension>=0.3      # TwoNN intrinsic-dimension estimator
+
+# Plotting (reproduce_figures.ipynb)
+matplotlib>=3.7
+cmocean>=3.0               # phase colormap
+
+# Notebook
+jupyter>=1.0
+ipykernel>=6.0
