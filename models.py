@@ -1,5 +1,5 @@
 """
-Neural network architectures for DYSIB on pendulum dynamics.
+Neural network architectures for DYSIB.
 
 DYSIB = Dynamical Symmetric Information Bottleneck.
 
@@ -73,7 +73,7 @@ class Encoder(nn.Module):
 
 class DeltaDecoder(nn.Module):
     """
-    Latent dynamics decoder.
+    Latent dynamics decoder (called δ-predictor in the paper).
 
     Predicts (mean_delta, logvar) from a past latent code zx, where:
         z_future ≈ zx + mean_delta          (greedy / deterministic rollout)
@@ -112,7 +112,7 @@ class DeltaDecoder(nn.Module):
 
 class DYSIB(nn.Module):
     """
-    Deep Variational Sufficient Information Bottleneck for frame-sequence data.
+    Dynamical Symmetric Information Bottleneck for frame-sequence data.
 
     Architecture
     ------------

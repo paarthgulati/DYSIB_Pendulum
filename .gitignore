@@ -22,6 +22,12 @@ results/
 
 # Notebook output figures (regenerable)
 Figures/
+Figures_*/
+
+# New-run figure data and checkpoints (local, not shipped)
+figure_data_*/
+checkpoints/newrun_*.pt
+checkpoints/test_run.pt
 
 # OS / editor
 .DS_Store
