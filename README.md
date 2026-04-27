@@ -15,9 +15,11 @@ Code and data for the paper:
 This repository demonstrates DySIB on a rigid pendulum: the input is a video of the pendulum (128×128 RGB frames), and the method discovers 2 latent dimensions that align with angle and angular velocity. The same training code can be applied to other dynamical systems by providing trajectory data in the same format (see [DETAILS.md](DETAILS.md) for how to adapt the data pipeline).
 
 The repository provides:
-- The full training code and pretrained models ready to use
-- The pendulum video dataset (downloaded automatically on first use)
-- A single notebook that regenerates every figure in the paper
+- Pretrained model checkpoints (~4.5 MB, shipped in `checkpoints/`)
+- Precomputed analysis arrays for every figure (~7 MB, shipped in `figure_data/`)
+- A single notebook that regenerates every figure in the paper — no GPU, no data download required
+- The full training code to retrain from scratch
+- The raw pendulum video dataset (downloaded automatically on first use, only needed for retraining)
 
 ---
 
