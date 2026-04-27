@@ -1,5 +1,5 @@
 """
-Training and evaluation functions for DYSIB on pendulum dynamics.
+Training and evaluation functions for DYSIB.
 
 Functions:
     train_dysib                  -- train a DYSIB model, return (model, history dict)
@@ -447,6 +447,12 @@ def _run_training(
     n_trials, T, D = frames.shape
     print(f"Loaded: {data_path}  shape=({n_trials}, {T}, {D})")
 
+    if samples_n > 1000:
+        raise ValueError(
+            f"samples_n={samples_n} would overlap the fixed test split "
+            f"(trials 1000–1199). Use --samples_n ≤ 1000."
+        )
+
     train_data = frames[:samples_n]
     test_data  = frames[1000:1200]
 
@@ -492,6 +498,7 @@ if __name__ == "__main__":
     p.add_argument("--lr", type=float, default=1e-4)
     p.add_argument("--batch_size", type=int, default=1024)
     p.add_argument("--gamma", type=float, default=0.01)
+    p.add_argument("--alpha", type=float, default=1.0)
     p.add_argument("--device", type=str,
                    default="cuda" if torch.cuda.is_available() else "cpu")
     args = p.parse_args()
@@ -500,5 +507,5 @@ if __name__ == "__main__":
         data_path=args.data, out_path=args.out,
         samples_n=args.samples_n, ndims=args.kz, num_frames=args.num_frames,
         rep=args.rep, epochs=args.epochs, lr=args.lr, batch_size=args.batch_size,
-        gamma=args.gamma, device=args.device,
+        gamma=args.gamma, alpha=args.alpha, device=args.device,
     )

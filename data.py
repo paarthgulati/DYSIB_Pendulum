@@ -3,7 +3,7 @@ Download, extract, preprocess, and load the single-pendulum dataset.
 
 Raw data source (Zenodo):
     https://zenodo.org/records/6653856/files/single_pendulum.zip
-    (supports Chen et al. "Discovering State Variables Hidden in Experimental Data".)
+    (Chen et al. "Automated discovery of fundamental variables hidden in experimental data", 2022)
 
 Raw archive layout:
     single_pendulum/
