@@ -2,7 +2,7 @@
 
 Code and data for the paper:
 
-> **DySIB: Learning True Dynamical Coordinates from High-Dimensional Observations**
+> **Information bottleneck for learning the phase space of dynamics from high-dimensional experimental data**
 > K. Michael Martini, Eslam Abdelaleem, Paarth Gulati, and Ilya Nemenman. *[preprint]*, 2026.
 > [DOI / arXiv link]
 
@@ -165,7 +165,7 @@ If you use this code or the trained models, please cite:
 
 ```bibtex
 @article{martini2026dysib,
-  title   = {DySIB: Learning True Dynamical Coordinates from High-Dimensional Observations},
+  title   = {Information bottleneck for learning the phase space of dynamics from high-dimensional experimental data},
   author  = {Martini, K. Michael and Abdelaleem, Eslam and Gulati, Paarth and Nemenman, Ilya},
   journal = {[preprint]},
   year    = {2026},
