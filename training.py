@@ -417,7 +417,7 @@ def _run_training(
     data_path,
     out_path,
     samples_n=1000,
-    kz=2,
+    ndims=2,
     num_frames=2,
     rep=0,
     dzf=32,
@@ -458,7 +458,7 @@ def _run_training(
     x_test = torch.stack([test_ds[i][0] for i in range(len(test_ds))]).to(device)
     y_test = torch.stack([test_ds[i][1] for i in range(len(test_ds))]).to(device)
 
-    model = DYSIB(input_dim=D, dz=kz, dzf=dzf, num_frames=num_frames,
+    model = DYSIB(input_dim=D, dz=ndims, dzf=dzf, num_frames=num_frames,
                   gamma=gamma, alpha=alpha, hidden=hidden,
                   decoder_hdim=decoder_hdim).to(device)
 
@@ -468,7 +468,7 @@ def _run_training(
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     torch.save({
         "state_dict": model.state_dict(),
-        "params": dict(kz=kz, num_frames=num_frames, samples_n=samples_n, rep=rep,
+        "params": dict(ndims=ndims, num_frames=num_frames, samples_n=samples_n, rep=rep,
                        dzf=dzf, hidden=hidden, decoder_hdim=decoder_hdim,
                        gamma=gamma, alpha=alpha, input_dim=D),
         "history": hist,
@@ -498,7 +498,7 @@ if __name__ == "__main__":
 
     _run_training(
         data_path=args.data, out_path=args.out,
-        samples_n=args.samples_n, kz=args.kz, num_frames=args.num_frames,
+        samples_n=args.samples_n, ndims=args.kz, num_frames=args.num_frames,
         rep=args.rep, epochs=args.epochs, lr=args.lr, batch_size=args.batch_size,
         gamma=args.gamma, device=args.device,
     )
