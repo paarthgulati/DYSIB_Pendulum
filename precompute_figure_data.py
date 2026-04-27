@@ -62,9 +62,10 @@ OLD_H5_DIR = Path("/path/to/your/sweep_h5_files")
 def _load_checkpoint(path):
     ck = torch.load(path, map_location=DEVICE, weights_only=False)
     p  = ck["params"]
-    # Normalize between shipped checkpoints ("ndims") and current training.py ("kz").
-    if "kz" in p and "ndims" not in p:
-        p = dict(p, ndims=p["kz"])
+    # Compat patch (now inactive): training.py previously saved this key as "kz".
+    # Inconsistency resolved — training.py now uniformly saves "ndims" everywhere.
+    # if "kz" in p and "ndims" not in p:
+    #     p = dict(p, ndims=p["kz"])
     model = DYSIB(
         input_dim    = int(p["input_dim"]),
         dz           = int(p["ndims"]),
