@@ -4,7 +4,7 @@ Code and data for the paper:
 
 > **Information bottleneck for learning the phase space of dynamics from high-dimensional experimental data**
 > K. Michael Martini, Eslam Abdelaleem, Paarth Gulati, and Ilya Nemenman.
-> [*[preprint]*](https://doi.org/10.48550/arXiv.2604.24662) [https://doi.org/10.48550/arXiv.2604.24662]
+> [*[preprint]*][https://doi.org/10.48550/arXiv.2604.24662]
 
 ---
 
