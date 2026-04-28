@@ -3,7 +3,7 @@
 Code and data for the paper:
 
 > **Information bottleneck for learning the phase space of dynamics from high-dimensional experimental data**
-> K. Michael Martini, Eslam Abdelaleem, Paarth Gulati, and Ilya Nemenman.
+> K. Michael Martini*, Eslam Abdelaleem*, Paarth Gulati, and Ilya Nemenman.
 > [**preprint**](https://doi.org/10.48550/arXiv.2604.24662)
 
 ---
@@ -169,7 +169,8 @@ If you use this code or the trained models, please cite:
 @article{martini2026dysib,
   title   = {Information bottleneck for learning the phase space of dynamics from high-dimensional experimental data},
   author  = {Martini, K. Michael and Abdelaleem, Eslam and Gulati, Paarth and Nemenman, Ilya},
-  journal = {[preprint]},
+  journal = {arXiv preprint arXiv:2604.24662},
+  doi     = {https://doi.org/10.48550/arXiv.2604.24662},
   year    = {2026},
 }
 ```
